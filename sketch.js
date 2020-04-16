@@ -3,7 +3,7 @@
 let papuga, angle=0,size = 50, speed =0.1, step = 0.1, clearTime=false, drawing = true;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowWidth);
   papuga = createImg('papuga.png');
   papuga.crossOrigin = 'Anonymous';
   //papuga.hide();
@@ -19,8 +19,9 @@ function draw() {
       }
   translate(width/2, height/2);
 	rotate(angle);
+  scale(size/50);
   try{
-  image(papuga, 0,0,size,size);
+  image(papuga, 0,0);
   } catch {
     papugaReset();
     
